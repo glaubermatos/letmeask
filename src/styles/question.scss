@@ -1,0 +1,102 @@
+.question {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--white-details);
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+
+    box-shadow: var(--box-shadow);
+
+    & + .question {
+        margin-top: 0.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: var(--black);
+        line-height: 1.5rem;
+    }
+
+    &.highlighted {
+        background: var(--white-highlighted);
+        border: 1px solid var(--purple);
+
+        footer .user-info span {
+            color: var(--black);
+        }
+    }
+    
+    &.answered {
+        background: var(--gray-ligth);
+        
+        footer .user-info span {
+            color: var(--gray-dark);
+        }
+        
+        footer .user-info img {
+            filter: gray; /* IE6-9 */
+            -webkit-filter: grayscale(100%);
+        }
+    }
+
+    footer {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .user-info {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+            }
+
+            span {
+                font-size: 0.875rem;
+                color: var(--gray-dark);
+                margin-left: 0.5rem;
+            }
+        }
+
+        div:last-child {
+            display: flex;
+            gap: 1rem; 
+        }        
+
+        button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            transition: filter 0.2s;
+            
+            &.like-button {
+                display: flex;
+                align-items: flex-end;
+                gap: 0.5rem;
+                color: var(--gray-dark);
+
+                &.liked {
+                    color: var(--purple);
+
+                    svg path {
+                        stroke: var(--purple);
+                    }
+                }
+            }            
+
+            & svg:not(.delete-question):hover path,
+            & svg:not(.delete-question):hover circle {
+                stroke: var(--purple);
+            }
+            & svg.delete-question:hover path {
+                stroke: var(--danger);
+            }
+        }
+    }
+}

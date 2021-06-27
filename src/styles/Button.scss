@@ -1,0 +1,46 @@
+.button {
+    height: 50px;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: var(--purple);
+    color: var(--white-details);
+    padding: 0 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    border: 0;
+
+    transition: background filter .2s;
+    
+    &:not(:disabled):not(.outlined):hover {
+        background: var(--hover-purple);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        filter: opacity(0.5);
+    }
+
+    img,
+    svg {
+        margin-right: 0.5rem;
+    }
+
+    svg path {
+        stroke: var(--white-details);
+    }
+
+    &.outlined {
+        border: 1px solid var(--purple);
+        background: var(--white-background);
+        color: var(--purple);
+
+        &:hover {
+            color: var(--hover-purple);
+            border-color: var(--hover-purple);
+        }
+    }
+}

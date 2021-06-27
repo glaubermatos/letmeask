@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --aside-title: #fff;
+        --aside-subtitle: #F8F8F8;
+        --white: #fff;
+        --white-background: #f8f8f8;
+        --white-details: #FEFEFE;
+        --white-highlighted: #F4F0FF;
+        --black: #29292E;
+        --purple: #835AFD;
+        --hover-purple: #6F4BD8;
+        --pink-dark: #E559F9;
+        --gray-ligth: #DBDCDD;
+        --gray-medium: #A8A8B3;
+        --gray-dark: #737380;
+        --hover-gray-medium: #7E7E86;
+        --header-divider: #E2E2E2;
+        --red: #EA4335;
+        --danger: #E73F5D;
+    
+        --box-shadow:  0px 2px 12px rgba(0, 0, 0, 0.04);
+        --bg-aside-auth: var(--purple);
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --aside-title: #BABAD1;
+        --aside-subtitle: #9595A6;
+        --white: #fff;
+        --white-background: #1B1726;
+        --white-details: #221D30;
+        --white-highlighted: #322B47;
+        --black: #BABAD1;
+        --purple: #835AFD;
+        --hover-purple: #6F4BD8;
+        --pink-dark: #DF57F2;
+        --gray-ligth: #15131F;
+        --gray-medium: #7263A3;
+        --gray-dark: #9595A6;
+        --hover-gray-medium: #7E7E86;
+        --header-divider: #2D2740;
+        --red: #EA6054;
+        --danger: #CC5268;
+
+        --box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+        --bg-aside-auth: var(--white-details);
+    }
+}
+
+body {
+    background: var(--white-background);
+    color: var(--black);
+}
+
+body, input, button, textarea {
+    font: 400 16px 'Roboto', sans-serif;
+}

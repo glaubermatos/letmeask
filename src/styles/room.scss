@@ -1,0 +1,125 @@
+#page-room {
+    header {
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--header-divider);
+        
+        .content {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > svg#logo {
+                max-height: 45px;
+            }
+
+            > div {
+                display: flex;
+                gap: 0.5rem;
+
+                > button {
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+
+        .room-title {
+            margin: 2.2rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+
+            > h1 {
+                font: 700 1.5rem 'Poppins', sans-serif;
+                color: var(--black);
+            }
+            
+            > span {
+                margin-left: 1rem;
+                font-weight: 500;
+                font-size: 0.875rem;
+                color: var(--white-background);
+                padding: 0.5rem 1rem;
+                background: var(--pink-dark);
+                border-radius: 9999px;
+            }
+        }
+
+        form {
+            textarea {
+                width: 100%;
+                border: 1px solid transparent;
+                outline: none;
+                padding: 0.7rem 1rem 0.7rem;
+                border-radius: 0.5rem;
+                background: var(--white-details);
+                box-shadow: var(--box-shadow);
+                resize: vertical;
+                min-height: 130px;
+                line-height: 24px;
+                color: var(--black);
+
+                &::placeholder {
+                    color: var(--gray-dark      );
+                }
+
+                &:focus {
+                    border: 1px solid var(--purple);
+                }
+            }
+
+            .form-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 1rem;
+
+                .user-info {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                    }
+
+                    span {
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        color: var(--black);
+                        margin-left: 0.5rem;
+                    }
+                }
+
+                > span {
+                    font-size: 0.875rem;
+                    color: var(--gray-medium-2);
+                    font-weight: 500;
+
+                    button {
+                        background: transparent;
+                        border: 0;
+                        color: var(--purple);
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .questions-list {
+            margin-top: 2rem;
+        }
+    }
+}
