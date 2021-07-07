@@ -3,8 +3,6 @@ import { useHistory } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 
 import illustrationImg from '../assets/images/illustration.svg'
-import googleIconImg from '../assets/images/google-icon.svg'
-import signInImg from '../assets/images/sign-in.svg'
 
 import { Button } from '../components/Button'
 import { Logo } from '../components/Logo'
